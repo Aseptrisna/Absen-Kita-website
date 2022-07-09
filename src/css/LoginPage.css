@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.login-container {
+    display: flex;
+    flex-direction: row;
+    margin: 5%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.left-login-container {
+    flex: 50%;
+    align-self: center;
+}
+
+.right-login-container {
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-self: center;
+}
+
+@media (max-width: 800px) {
+    .login-container {
+        flex-direction: column;
+    }
+
+    .logo {
+        width: 70%;
+        align-self: center;
+        margin-left: 15%;
+        margin-bottom: 20px;
+    }
+}
+
+.logo {
+    width: 90%;
+}
+
+.login-title {
+    align-self: center;
+    font-weight: bolder;
+    font: 'Poppins', sans-serif;
+    color: #576F72;
+}
+
+.right-login-container input {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: 1px;
+    display: block;
+    width: 100%;
+    padding: 7px;
+    border: 1px;
+    border-bottom: 1px solid #ddd;
+    background: transparent;
+    margin-bottom: 10px;
+    font: 16px 'Poppins', sans-serif;
+    height: 45px;
+}
+
+.right-login-container button {
+    margin-top: 10px;
+    width: 250px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    font: 16px 'Poppins', sans-serif;
+    background-color: #576F72;
+    color: white;
+    align-self: center;
+}
+
+.right-login-container a {
+    font: 16px 'Poppins', sans-serif;
+    align-self: center;
+    color: #576F72;
+}
+
+.right-login-container a:hover {
+    color: #576F72;
+}
+
+.right-login-container div {
+    margin-top: 15%;
+    align-self: #576F72;
+}
+

@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.nav-tabs .nav-link {
+    background-color: transparent !important;
+    color: #576F72 !important;
+    font-family: 'Poppins', sans-serif;
+}
+
+.inside-tabs input {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    display: block;
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border-bottom: 1px solid #576F72;
+    background: transparent;
+    margin-bottom: 20px;
+    font: 16px 'Poppins', sans-serif;
+    height: 45px;
+    color: #576F72;
+}
+
+.inside-tabs select {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    display: block;
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border-bottom: 1px solid #576F72;
+    background: transparent;
+    margin-bottom: 20px;
+    font: 16px 'Poppins', sans-serif;
+    height: 45px;
+    color: #576F72;
+}
+
+.modal textarea {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    display: block;
+    width: 100%;
+    padding: 7px;
+    border: none;
+    background: transparent;
+    margin-bottom: 20px;
+    font: 16px 'Poppins', sans-serif;
+    height: 150px;
+    color: #576F72;
+}
+
+.navbar button {
+    color: #576F72;
+    border: none;
+    background: none;
+}
+
+.inside-tabs button {
+    color: #576F72;
+    border: none;
+    background: none;
+}
+
+.add-btn {
+    margin-top: 20px;
+    font-weight: bold;
+    font: 16px 'Poppins', sans-serif;
+}
+
+.inside-tabs {
+    display: flex;
+    justify-content: space-between;
+    font: 16px 'Poppins', sans-serif;
+}
+
+.line {
+    border-left: 2px solid #576F72;
+}
+
+.left-input {
+    flex: 50%;
+    padding: 20px;
+}
+
+.right-input {
+    flex: 50%;
+    padding: 20px;
+}
+
+table {
+    text-align: center;
+    width: 100%;
+    border: 2px solid #576F72;
+    font: 16px 'Poppins', sans-serif;
+}
+
+table td {
+    border: 2px solid #576F72;
+    padding: 10px;
+}
+
+table button {
+    color: #576F72;
+    border: none;
+    background: none;
+}
+
+.pagination {
+    margin-top: 20px;
+    font: 16px 'Poppins', sans-serif;
+}
+
+.pagination li {
+    border: 2px solid #576F72;
+    padding: 5px 10px;
+}
+
+.pagination a{
+    text-decoration: none;
+    color: #576F72;
+}
+
+.pagination a::after{
+    text-decoration: none;
+    color: #576F72;
+}
