@@ -13,6 +13,9 @@ class Service {
     getUsers(data) {
         return Http.post("users/get", data, { headers: authHeader() })
     }
+    getUnits(data) {
+        return Http.post("aplications/getbyguid", data, { headers: authHeader() })
+    }
 
     getUsersByGuid(data) {
         return Http.post("users/getbyguid", data, { headers: authHeader() })

@@ -39,12 +39,12 @@ export default class NavbarComponent extends Component {
             <div>
                 <Navbar bg="light" expand="lg">
                     <Container>
-                        <Navbar.Brand href="/">SSO</Navbar.Brand>
+                        <Navbar.Brand href="/">ABSEN KITA</Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="me-auto">
-                                <Nav.Link href="/">Users</Nav.Link>
-                                <Nav.Link href="/apps">Apps</Nav.Link>
+                                <Nav.Link href="/users">Users</Nav.Link>
+                                <Nav.Link href="/apps">Units</Nav.Link>
                             </Nav>
                             <Nav>
                                 <button type='submit' onClick={() => this.Konfirmasi()}>Logout</button>
