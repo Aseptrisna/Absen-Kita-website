@@ -119,7 +119,7 @@ export default class HomeView extends Component {
   }
   getUnits() {
     let data = {
-        guid: getGuid(),
+      guid: getGuid(),
     };
     service
       .getUnits(data)
@@ -210,11 +210,7 @@ export default class HomeView extends Component {
       AlertComponent.Error("Nama harus diisi!");
     } else if (this.state.telpEdit === "") {
       AlertComponent.Error("No. Telp harus diisi!");
-    } 
-    // else if (this.state.addressEdit === "") {
-    //   AlertComponent.Error("Alamat harus diisi!");
-    // }
-     else {
+    } else {
       this.OnEdit(id);
     }
   }
@@ -323,11 +319,7 @@ export default class HomeView extends Component {
                   >
                     <option value="">Pilih Unit</option>
                     {this.state.units.map((option) => (
-                      <option
-                        value={option.guid}
-                      >
-                        {option.name}
-                      </option>
+                      <option value={option.guid}>{option.name}</option>
                     ))}
                   </select>
                   <button

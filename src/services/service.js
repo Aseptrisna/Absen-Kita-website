@@ -48,6 +48,12 @@ class Service {
     updateApplication(id, data) {
         return Http.put("aplications/update/"+id, data, { headers: authHeader() })
     }
+    getAbent(data) {
+        return Http.post("absent/get",data, { headers: authHeader() })
+    }
+    getAbentDetail(data) {
+        return Http.post("absent/getdetail",data, { headers: authHeader() })
+    }
 }
 
 export default new Service();
