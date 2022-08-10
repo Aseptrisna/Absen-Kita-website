@@ -1,22 +1,16 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { AppsSetup, HomeSetup, RegisterSetup,AbsentSetup,SetupDetailViewAbsent} from "../pages/setup";
+import {
+  AppsSetup,
+  HomeSetup,
+  RegisterSetup,
+  AbsentSetup,
+  SetupDetailViewAbsent,
+} from "../pages/setup";
 import { LoginView } from "../pages/view";
-import { getRole } from "../helpers/jwt";
+import { getRole, getToken } from "../helpers/jwt";
 export default function Routers() {
-  if (getRole() === "instansi") {
-    return (
-      <Router>
-        <Routes>
-          <Route path="/" element={<AbsentSetup/>} />
-          <Route path="/users" element={<HomeSetup />} />
-          <Route path="/apps" element={<AppsSetup />} />
-          <Route path="/register" element={<RegisterSetup />} />
-          <Route path="/absents" element={<SetupDetailViewAbsent />} />
-        </Routes>
-      </Router>
-    );
-  } else {
+  if (!getToken()) {
     return (
       <Router>
         <Routes>
@@ -27,5 +21,30 @@ export default function Routers() {
         </Routes>
       </Router>
     );
+  } else {
+    if (getRole() === "instansi") {
+      return (
+        <Router>
+          <Routes>
+            <Route path="/" element={<AbsentSetup />} />
+            <Route path="/users" element={<HomeSetup />} />
+            <Route path="/apps" element={<AppsSetup />} />
+            <Route path="/register" element={<RegisterSetup />} />
+            <Route path="/absents" element={<SetupDetailViewAbsent />} />
+          </Routes>
+        </Router>
+      );
+    } else {
+      return (
+        <Router>
+          <Routes>
+            <Route path="/" element={<LoginView />} />
+            <Route path="/users" element={<LoginView />} />
+            <Route path="/apps" element={<LoginView />} />
+            <Route path="/register" element={<RegisterSetup />} />
+          </Routes>
+        </Router>
+      );
+    }
   }
 }

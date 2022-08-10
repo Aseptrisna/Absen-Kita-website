@@ -45,7 +45,9 @@ export default class AbsentView extends Component {
         AlertComponent.Error(e.response.data.message);
       });
   }
-  detail(data) {}
+  detail(data) {
+    console.log(data)
+  }
   getUnits() {
     let data = {
       guid: getGuid(),
@@ -150,16 +152,35 @@ export default class AbsentView extends Component {
               renderOnZeroPageCount={null}
             />
           </Pagination>
-        </Container>
-        <Container>
-          <br />
+
+          <Col className="mt">
           <Row className="overflow-auto menu">
-            {this.state.lists &&
-              this.state.lists.map((data) => (
-                <List_Absent key={data._id} data={data} detail={this.detail} />
-              ))}
-          </Row>
+              {this.state.lists &&
+                this.state.lists.map((data) => (
+                  <List_Absent
+                    key={data._id}
+                    data={data}
+                    detail={this.detail}
+                  />
+                ))}
+            </Row>
+          </Col>
         </Container>
+        {/* <Container>
+          <br />
+          <Col>
+            <Row className="overflow-auto menu">
+              {this.state.lists &&
+                this.state.lists.map((data) => (
+                  <List_Absent
+                    key={data._id}
+                    data={data}
+                    detail={this.detail}
+                  />
+                ))}
+            </Row>
+          </Col>
+        </Container> */}
       </div>
     );
   }

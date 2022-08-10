@@ -125,7 +125,6 @@ export default class HomeView extends Component {
       .getUnits(data)
       .then((res) => {
         const units = res.data.data;
-        // console.log(units)
         this.setState({ units });
       })
       .catch((error) => {

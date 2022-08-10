@@ -27,3 +27,12 @@ export function getGRole() {
     return { role: "" };
   }
 }
+
+export function getToken() {
+  const token = localStorage.getItem("token");
+  if (token !== null) {
+    return token;
+  } else {
+    return token;
+  }
+}

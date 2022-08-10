@@ -84,10 +84,10 @@ export default class DetailAbsentView extends Component {
           <td>{nama}</td>
           <td>{deskripsi}</td>
           <td>{alamat}</td>
-          <td>{jam}{tanggal}</td>
+          <td>{jam}-{tanggal}</td>
           <td>
           <img
-                src={API_URL_SERVER + gambar}
+                src={"https://absensi-selfie.pptik.id/data/kehadiran/image/" + gambar}
                 className="sliderimg"
                 alt=""
                 width="100%"
