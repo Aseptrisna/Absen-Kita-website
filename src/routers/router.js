@@ -6,6 +6,7 @@ import {
   RegisterSetup,
   AbsentSetup,
   SetupDetailViewAbsent,
+  SetupRekap
 } from "../pages/setup";
 import { LoginView } from "../pages/view";
 import { getRole, getToken } from "../helpers/jwt";
@@ -18,6 +19,7 @@ export default function Routers() {
           <Route path="/users" element={<LoginView />} />
           <Route path="/apps" element={<LoginView />} />
           <Route path="/register" element={<RegisterSetup />} />
+          <Route path="/detail" element={<LoginView />} />
         </Routes>
       </Router>
     );
@@ -31,6 +33,7 @@ export default function Routers() {
             <Route path="/apps" element={<AppsSetup />} />
             <Route path="/register" element={<RegisterSetup />} />
             <Route path="/absents" element={<SetupDetailViewAbsent />} />
+            <Route path="/detail" element={<SetupRekap />} />
           </Routes>
         </Router>
       );
@@ -42,6 +45,7 @@ export default function Routers() {
             <Route path="/users" element={<LoginView />} />
             <Route path="/apps" element={<LoginView />} />
             <Route path="/register" element={<RegisterSetup />} />
+            <Route path="/detail" element={<LoginView />} />
           </Routes>
         </Router>
       );

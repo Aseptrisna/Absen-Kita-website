@@ -54,6 +54,9 @@ class Service {
     getAbentDetail(data) {
         return Http.post("absent/getdetail",data, { headers: authHeader() })
     }
+    getAbentUser(data) {
+        return Http.post("absent/get-byuser",data, { headers: authHeader() })
+    }
 }
 
 export default new Service();

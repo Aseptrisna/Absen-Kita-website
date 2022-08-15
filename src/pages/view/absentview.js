@@ -46,7 +46,8 @@ export default class AbsentView extends Component {
       });
   }
   detail(data) {
-    console.log(data)
+    localStorage.setItem('guid',data.user);
+    localStorage.setItem('nama',data.nama);
   }
   getUnits() {
     let data = {

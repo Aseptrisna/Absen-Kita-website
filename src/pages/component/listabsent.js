@@ -17,7 +17,7 @@ const List_Absent = ({ data, detail }) => {
   ];
   const bulan = data.bulan.replace(/^0+/, "");
   const bulanint = parseInt(bulan) - 1;
-  const presentase=data.jumlah/26*100;
+  const presentase = (data.jumlah / 26) * 100;
   return (
     <>
       <Col md={4} xs={8} xl={4} className="rowA mb-4">
@@ -63,6 +63,7 @@ const List_Absent = ({ data, detail }) => {
               onClick={() => {
                 detail(data);
               }}
+              href="/detail"
             >
               Detail
             </Button>
